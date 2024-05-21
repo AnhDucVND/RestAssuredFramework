@@ -48,7 +48,7 @@ public class UserTests {
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
     }
-    
+
     @Test(priority = 3)
     public void testUpdateUser(){
         userPayload.setFirstName(faker.name().firstName());
