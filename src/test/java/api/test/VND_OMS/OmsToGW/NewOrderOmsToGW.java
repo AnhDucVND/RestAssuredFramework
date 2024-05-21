@@ -1,4 +1,4 @@
-package api.test;
+package api.test.VND_OMS.OmsToGW;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -146,20 +146,22 @@ public class NewOrderOmsToGW {
         String tag_581="^A581=";
         Assert.assertTrue(logMsg.contains(tag_581), "Tag 581 không tồn tại!");
     }
+
     @Test(priority = 26)
     public void checkTag_20000() {
-        String tag_20000="^A20000=";
+        String tag_20000 = "^A20000=";
         Assert.assertTrue(logMsg.contains(tag_20000), "Tag 20000 không tồn tại!");
     }
+
     @Test(priority = 27)
     public void checkTag_20054() {
-        String tag_20054="^A20054=";
+        String tag_20054 = "^A20054=";
         Assert.assertTrue(logMsg.contains(tag_20054), "Tag 20054 không tồn tại!");
     }
 
     @Test(priority = 28)
     public void checkTag_20064() {
-        String tag_20064="^A220064=";
+        String tag_20064 = "^A220064=";
         Assert.assertTrue(logMsg.contains(tag_20064), "Tag 20064 không tồn tại!");
     }
 
