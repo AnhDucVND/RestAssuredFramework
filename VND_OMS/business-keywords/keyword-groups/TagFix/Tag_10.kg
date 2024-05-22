@@ -1,0 +1,118 @@
+{
+  "platform": {
+    "type": "Web"
+  },
+  "varNode": {
+    "descendants": {
+      "INPUT": {
+        "descendants": {
+          "msgFix": {
+            "descendants": {},
+            "value": ""
+          },
+          "valueOfTag": {
+            "descendants": {},
+            "value": ""
+          }
+        }
+      },
+      "REPO": {
+        "descendants": {}
+      },
+      "OUTPUT": {
+        "descendants": {
+          "flag": {
+            "descendants": {},
+            "value": ""
+          }
+        }
+      },
+      "KEYWORD": {
+        "descendants": {}
+      }
+    },
+    "value": "094a9c20-40ac-4d4d-8e2e-e3e74d04934d"
+  },
+  "executions": [
+    {
+      "uuid": "db46e8ba-b6fe-450f-a1ca-136ee1662774",
+      "name": "Verify Tag 10",
+      "platform": {
+        "type": "core",
+        "displayName": "core"
+      },
+      "objRepo": [],
+      "params": [
+        {
+          "name": "Msg Fix",
+          "type": "String",
+          "defaultValue": "`$.this.INPUT.msgFix`",
+          "source": ""
+        },
+        {
+          "name": "Tag",
+          "type": "String",
+          "defaultValue": "10",
+          "source": ""
+        },
+        {
+          "name": "Value of tag",
+          "type": "String",
+          "defaultValue": "",
+          "source": ""
+        }
+      ],
+      "output": {
+        "name": "$.this.OUTPUT.flag",
+        "type": "Boolean",
+        "defaultValue": ""
+      },
+      "keywordPath": "709b64fa-3c1c-4270-b542-5925bb2e324a",
+      "keywordSource": "custom",
+      "keywordMethod": "verifyTagsinMsgFix",
+      "description": "",
+      "failureHandling": "CONTINUE_ON_FAILURE",
+      "failureDescription": "",
+      "enable": true,
+      "captureImg": false
+    },
+    {
+      "uuid": "559683cf-fde0-44aa-8502-e40864710622",
+      "name": "Verify Text Equal",
+      "platform": {
+        "type": "core",
+        "displayName": "core"
+      },
+      "objRepo": [],
+      "params": [
+        {
+          "name": "text",
+          "type": "String",
+          "defaultValue": "`$.this.OUTPUT.flag`",
+          "source": ""
+        },
+        {
+          "name": "anotherText",
+          "type": "String",
+          "defaultValue": "true",
+          "source": ""
+        }
+      ],
+      "output": {
+        "name": "",
+        "type": "void",
+        "defaultValue": "",
+        "source": ""
+      },
+      "keywordPath": "23",
+      "keywordSource": "internal",
+      "keywordMethod": "verifyTextEqual",
+      "description": "",
+      "failureHandling": "CONTINUE_ON_FAILURE",
+      "failureDescription": "",
+      "enable": true,
+      "captureImg": false
+    }
+  ],
+  "uuid": "094a9c20-40ac-4d4d-8e2e-e3e74d04934d"
+}

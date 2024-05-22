@@ -1,0 +1,114 @@
+{
+  "platform": {
+    "type": "Web"
+  },
+  "varNode": {
+    "descendants": {
+      "INPUT": {
+        "descendants": {
+          "msgFix": {
+            "descendants": {},
+            "value": ""
+          }
+        }
+      },
+      "REPO": {
+        "descendants": {}
+      },
+      "OUTPUT": {
+        "descendants": {
+          "flag": {
+            "descendants": {},
+            "value": ""
+          }
+        }
+      },
+      "KEYWORD": {
+        "descendants": {}
+      }
+    },
+    "value": "b76e1cb6-5125-4bf0-9b20-c4b1fd9ec5a2"
+  },
+  "executions": [
+    {
+      "uuid": "df8be37e-3cb2-4fda-ad45-1e217ee0d626",
+      "name": "Verify Tag 8",
+      "platform": {
+        "type": "core",
+        "displayName": "core"
+      },
+      "objRepo": [],
+      "params": [
+        {
+          "name": "Msg Fix",
+          "type": "String",
+          "defaultValue": "`$.this.INPUT.msgFix`",
+          "source": ""
+        },
+        {
+          "name": "Tag",
+          "type": "String",
+          "defaultValue": "8",
+          "source": ""
+        },
+        {
+          "name": "Value of tag",
+          "type": "String",
+          "defaultValue": "",
+          "source": ""
+        }
+      ],
+      "output": {
+        "name": "$.this.OUTPUT.flag",
+        "type": "Boolean",
+        "defaultValue": ""
+      },
+      "keywordPath": "709b64fa-3c1c-4270-b542-5925bb2e324a",
+      "keywordSource": "custom",
+      "keywordMethod": "verifyTagsinMsgFix",
+      "description": "",
+      "failureHandling": "CONTINUE_ON_FAILURE",
+      "failureDescription": "",
+      "enable": true,
+      "captureImg": false
+    },
+    {
+      "uuid": "a9de0a98-7005-4bb3-b01a-dabc3e7ba7c6",
+      "name": "Verify Text Equal",
+      "platform": {
+        "type": "core",
+        "displayName": "core"
+      },
+      "objRepo": [],
+      "params": [
+        {
+          "name": "text",
+          "type": "String",
+          "defaultValue": "`$.this.OUTPUT.flag`",
+          "source": ""
+        },
+        {
+          "name": "anotherText",
+          "type": "String",
+          "defaultValue": "true",
+          "source": ""
+        }
+      ],
+      "output": {
+        "name": "",
+        "type": "void",
+        "defaultValue": "",
+        "source": ""
+      },
+      "keywordPath": "23",
+      "keywordSource": "internal",
+      "keywordMethod": "verifyTextEqual",
+      "description": "",
+      "failureHandling": "CONTINUE_ON_FAILURE",
+      "failureDescription": "",
+      "enable": true,
+      "captureImg": false
+    }
+  ],
+  "uuid": "b76e1cb6-5125-4bf0-9b20-c4b1fd9ec5a2"
+}

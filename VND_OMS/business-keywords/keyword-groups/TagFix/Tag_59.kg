@@ -1,0 +1,164 @@
+{
+  "platform": {
+    "type": "Web"
+  },
+  "varNode": {
+    "descendants": {
+      "INPUT": {
+        "descendants": {
+          "msgFix": {
+            "descendants": {},
+            "value": ""
+          },
+          "odType": {
+            "descendants": {},
+            "value": ""
+          }
+        }
+      },
+      "REPO": {
+        "descendants": {}
+      },
+      "OUTPUT": {
+        "descendants": {
+          "flag": {
+            "descendants": {},
+            "value": ""
+          }
+        }
+      },
+      "KEYWORD": {
+        "descendants": {}
+      }
+    },
+    "value": "2d3f942a-8567-4170-aa03-ff32c9b2c7f9"
+  },
+  "executions": [
+    {
+      "uuid": "e4021d7f-4849-4c82-8cd3-0f2eccfd1dd9",
+      "name": "If statement",
+      "platform": {
+        "type": "control",
+        "displayName": "",
+        "capUUID": ""
+      },
+      "objRepo": [],
+      "params": [
+        {
+          "name": "expression1",
+          "type": "String",
+          "defaultValue": "`$.this.INPUT.odType`",
+          "source": ""
+        },
+        {
+          "name": "condition",
+          "type": "Comparision",
+          "defaultValue": "\u003d\u003d",
+          "source": ""
+        },
+        {
+          "name": "expression2",
+          "type": "String",
+          "defaultValue": "LO",
+          "source": ""
+        }
+      ],
+      "output": {
+        "name": "",
+        "type": "void",
+        "defaultValue": "",
+        "source": ""
+      },
+      "keywordPath": "29",
+      "keywordSource": "internal",
+      "keywordMethod": "",
+      "description": "",
+      "failureHandling": "STOP_ON_FAILURE",
+      "failureDescription": "",
+      "enable": true,
+      "executions": [
+        {
+          "uuid": "d6637b7b-edd5-400d-bfba-55cdbb69039d",
+          "name": "Verify Tag 59",
+          "platform": {
+            "type": "core",
+            "displayName": "core"
+          },
+          "objRepo": [],
+          "params": [
+            {
+              "name": "Msg Fix",
+              "type": "String",
+              "defaultValue": "`$.this.INPUT.msgFix`",
+              "source": ""
+            },
+            {
+              "name": "Tag",
+              "type": "String",
+              "defaultValue": "59",
+              "source": ""
+            },
+            {
+              "name": "Value of tag",
+              "type": "String",
+              "defaultValue": "0",
+              "source": ""
+            }
+          ],
+          "output": {
+            "name": "$.this.OUTPUT.flag",
+            "type": "Boolean",
+            "defaultValue": "$.this.OUTPUT.flag"
+          },
+          "keywordPath": "709b64fa-3c1c-4270-b542-5925bb2e324a",
+          "keywordSource": "custom",
+          "keywordMethod": "verifyTagsinMsgFix",
+          "description": "",
+          "failureHandling": "CONTINUE_ON_FAILURE",
+          "failureDescription": "",
+          "enable": true,
+          "captureImg": false
+        },
+        {
+          "uuid": "9c380b37-74c3-4720-ad32-f70ccb9ee819",
+          "name": "Verify Text Equal",
+          "platform": {
+            "type": "core",
+            "displayName": "core"
+          },
+          "objRepo": [],
+          "params": [
+            {
+              "name": "text",
+              "type": "String",
+              "defaultValue": "`$.this.OUTPUT.flag`",
+              "source": ""
+            },
+            {
+              "name": "anotherText",
+              "type": "String",
+              "defaultValue": "true",
+              "source": ""
+            }
+          ],
+          "output": {
+            "name": "",
+            "type": "void",
+            "defaultValue": "",
+            "source": ""
+          },
+          "keywordPath": "23",
+          "keywordSource": "internal",
+          "keywordMethod": "verifyTextEqual",
+          "description": "",
+          "failureHandling": "CONTINUE_ON_FAILURE",
+          "failureDescription": "",
+          "enable": true,
+          "captureImg": false
+        }
+      ],
+      "captureImg": false
+    }
+  ],
+  "uuid": "2d3f942a-8567-4170-aa03-ff32c9b2c7f9"
+}

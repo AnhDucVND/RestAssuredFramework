@@ -1,0 +1,164 @@
+{
+  "platform": {
+    "type": "Web"
+  },
+  "varNode": {
+    "descendants": {
+      "INPUT": {
+        "descendants": {
+          "msgFix": {
+            "descendants": {},
+            "value": ""
+          },
+          "odType": {
+            "descendants": {},
+            "value": ""
+          }
+        }
+      },
+      "REPO": {
+        "descendants": {}
+      },
+      "OUTPUT": {
+        "descendants": {
+          "flag": {
+            "descendants": {},
+            "value": ""
+          }
+        }
+      },
+      "KEYWORD": {
+        "descendants": {}
+      }
+    },
+    "value": "f31aba60-ebbb-42e8-b890-be206c7c1180"
+  },
+  "executions": [
+    {
+      "uuid": "dc22dbec-9038-4730-a31b-0e88bc2ebabf",
+      "name": "Lệnh LO",
+      "platform": {
+        "type": "control",
+        "displayName": "",
+        "capUUID": ""
+      },
+      "objRepo": [],
+      "params": [
+        {
+          "name": "expression1",
+          "type": "String",
+          "defaultValue": "`$.this.INPUT.odType`",
+          "source": ""
+        },
+        {
+          "name": "condition",
+          "type": "Comparision",
+          "defaultValue": "\u003d\u003d",
+          "source": ""
+        },
+        {
+          "name": "expression2",
+          "type": "String",
+          "defaultValue": "LO",
+          "source": ""
+        }
+      ],
+      "output": {
+        "name": "",
+        "type": "void",
+        "defaultValue": "",
+        "source": ""
+      },
+      "keywordPath": "29",
+      "keywordSource": "internal",
+      "keywordMethod": "",
+      "description": "",
+      "failureHandling": "STOP_ON_FAILURE",
+      "failureDescription": "",
+      "enable": true,
+      "executions": [
+        {
+          "uuid": "dab19051-5695-400c-ad9e-4b03ed0c8016",
+          "name": "Verify Tag 40",
+          "platform": {
+            "type": "core",
+            "displayName": "core"
+          },
+          "objRepo": [],
+          "params": [
+            {
+              "name": "Msg Fix",
+              "type": "String",
+              "defaultValue": "`$.this.INPUT.msgFix`",
+              "source": ""
+            },
+            {
+              "name": "Tag",
+              "type": "String",
+              "defaultValue": "40",
+              "source": ""
+            },
+            {
+              "name": "Value of tag",
+              "type": "String",
+              "defaultValue": "2",
+              "source": ""
+            }
+          ],
+          "output": {
+            "name": "$.this.OUTPUT.flag",
+            "type": "Boolean",
+            "defaultValue": "$.this.OUTPUT.flag"
+          },
+          "keywordPath": "709b64fa-3c1c-4270-b542-5925bb2e324a",
+          "keywordSource": "custom",
+          "keywordMethod": "verifyTagsinMsgFix",
+          "description": "",
+          "failureHandling": "CONTINUE_ON_FAILURE",
+          "failureDescription": "",
+          "enable": true,
+          "captureImg": false
+        },
+        {
+          "uuid": "268e90c2-fef1-4b46-a3a7-235f3fa6407f",
+          "name": "Verify Text Equal",
+          "platform": {
+            "type": "core",
+            "displayName": "core"
+          },
+          "objRepo": [],
+          "params": [
+            {
+              "name": "text",
+              "type": "String",
+              "defaultValue": "`$.this.OUTPUT.flag`",
+              "source": ""
+            },
+            {
+              "name": "anotherText",
+              "type": "String",
+              "defaultValue": "true",
+              "source": ""
+            }
+          ],
+          "output": {
+            "name": "",
+            "type": "void",
+            "defaultValue": "",
+            "source": ""
+          },
+          "keywordPath": "23",
+          "keywordSource": "internal",
+          "keywordMethod": "verifyTextEqual",
+          "description": "",
+          "failureHandling": "CONTINUE_ON_FAILURE",
+          "failureDescription": "",
+          "enable": true,
+          "captureImg": false
+        }
+      ],
+      "captureImg": false
+    }
+  ],
+  "uuid": "f31aba60-ebbb-42e8-b890-be206c7c1180"
+}
